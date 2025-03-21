@@ -3,6 +3,8 @@ import Footer from "./components/Footer/Footer";
 import Header from "./components/Header/Header";
 import HelloSection from "./components/HelloSection/HelloSection";
 import Message from "./components/Message/Message";
+import cats from "./assets/cats.json";
+import Item from "./components/Item/Item";
 
 const App = () => {
   const age = 22;
@@ -14,6 +16,11 @@ const App = () => {
       <Message text="Продам праску" isOnline={true} />
       <Message author="Olena" text="Куплю хот-дог" isOnline={false} />
       <Message author="Ihor" text="Привіт" isOnline />
+      <ul>
+        {cats.map((item, idx) => (
+          <Item key={idx} item={item} />
+        ))}
+      </ul>
     </>
   );
 };
