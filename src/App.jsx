@@ -1,34 +1,21 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import React from "react";
+import Footer from "./components/Footer/Footer";
+import Header from "./components/Header/Header";
+import HelloSection from "./components/HelloSection/HelloSection";
+import Message from "./components/Message/Message";
 
-function App() {
-  const [count, setCount] = useState(0)
-
+const App = () => {
+  const age = 22;
+  const isAdult = age > 18;
   return (
     <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
+      <Header />
+      {isAdult && <h2>Привіт друже!</h2>}
+      <Message text="Продам праску" isOnline={true} />
+      <Message author="Olena" text="Куплю хот-дог" isOnline={false} />
+      <Message author="Ihor" text="Привіт" isOnline />
     </>
-  )
-}
+  );
+};
 
-export default App
+export default App;
