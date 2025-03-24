@@ -1,0 +1,35 @@
+:root {
+  --green: green;
+}
+.header {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+  color: white;
+  background-color: blue;
+  nav {
+    ul {
+      li {
+        color: pink;
+        &:hover {
+          color: red;
+        }
+      }
+    }
+  }
+  header nav ul li:hover {
+    color: red;
+  }
+}
+
+.list {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+.title {
+  text-align: center;
+  font-size: 2rem;
+  color: var(--green);
+}

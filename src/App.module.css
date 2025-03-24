@@ -1,0 +1,16 @@
+.box {
+  width: 200px;
+  height: 200px;
+  background-color: black;
+}
+
+.flex {
+  display: flex;
+  gap: 20px;
+  padding: 100px;
+}
+
+.boxRed {
+  composes: box;
+  background-color: red;
+}
